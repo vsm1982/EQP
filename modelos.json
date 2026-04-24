@@ -2,7 +2,7 @@
   "OpenAI": ["gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano", "gpt-5", "gpt-5-mini", "gpt-5-nano"],
   "DeepSeek": ["deepseek-v4-flash", "deepseek-v4-pro"],
   "Gemini": ["gemini-2.5-flash"],
-  "Claude": ["claude-sonnet-4-5-20250929", "claude-haiku-4-5-20251001"],
+  "Claude": ["claude-sonnet-4-6", "claude-haiku-4-5"],
   "Moonshot": ["kimi-k2.5", "kimi-k2.5"],
   "GROK": ["grok-4.20-beta-0309-reasoning", "grok-4.20-beta-latest-non-reasoning"]
 }
