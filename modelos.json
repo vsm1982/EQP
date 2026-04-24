@@ -1,6 +1,6 @@
 {
   "OpenAI": ["gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano", "gpt-5", "gpt-5-mini", "gpt-5-nano"],
-  "DeepSeek": ["deepseek-chat", "deepseek-reasoner"],
+  "DeepSeek": ["deepseek-v4-flash", "deepseek-v4-pro"],
   "Gemini": ["gemini-2.5-flash"],
   "Claude": ["claude-sonnet-4-5-20250929", "claude-haiku-4-5-20251001"],
   "Moonshot": ["kimi-k2-0905-preview", "kimi-k2-thinking"],
