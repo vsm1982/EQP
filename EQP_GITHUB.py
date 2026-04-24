@@ -1,11 +1,7 @@
 import streamlit as st
 import pymupdf as fitz
-import easyocr
-import numpy as np
-from PIL import Image
 import pandas as pd
 import tempfile
-import io
 import re
 from openai import OpenAI
 from datetime import datetime
@@ -15,33 +11,12 @@ import json
 
 
 
-# Função para extrair imagens das páginas do PDF
-def extrair_imagens_pdf(pdf_path):
+# Função para extrair texto diretamente do PDF
+def extrair_texto_pdf(pdf_path):
     doc = fitz.open(pdf_path)
-    imagens = []
-    for pagina in doc:
-        pix = pagina.get_pixmap(dpi=300)
-        img = Image.open(io.BytesIO(pix.tobytes("png")))
-        imagens.append(img)
-    return imagens
-
-# Instância global do leitor easyocr (carrega o modelo uma única vez)
-_ocr_reader = None
-
-def _get_ocr_reader():
-    global _ocr_reader
-    if _ocr_reader is None:
-        _ocr_reader = easyocr.Reader(['pt'], gpu=False)
-    return _ocr_reader
-
-# Função para aplicar OCR em uma lista de imagens
-def aplicar_ocr_em_imagens(imagens):
-    reader = _get_ocr_reader()
     texto_total = ""
-    for img in imagens:
-        img_array = np.array(img)
-        resultados = reader.readtext(img_array, detail=0, paragraph=True)
-        texto_total += "\n".join(resultados) + "\n"
+    for pagina in doc:
+        texto_total += pagina.get_text() + "\n"
     return texto_total
 
 
@@ -110,8 +85,7 @@ if arquivo_pdf and st.button("Extrair Texto do PDF"):
 
 
     with st.spinner("Processando PDF..."):
-        imagens = extrair_imagens_pdf(caminho_pdf)
-        texto_extraido = aplicar_ocr_em_imagens(imagens)
+        texto_extraido = extrair_texto_pdf(caminho_pdf)
         texto_extraido_limpo = limpar_texto_ocr(texto_extraido)
         
         # Armazena no session_state
@@ -266,7 +240,6 @@ if st.session_state.texto_extraido_limpo is not None:
 
         except Exception as e:
             st.error(f"Erro na requisição: {e}")
-
 
 
 
