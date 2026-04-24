@@ -35,12 +35,7 @@ if 'texto_extraido' not in st.session_state:
     st.session_state.texto_extraido_limpo = None
 
 # Chaves e URLs
-OPENAI_API_KEY = "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"
-DEEPSEEK_API_KEY = "sk-5b3d5b6b0594415c911d5d5195d2e362"
-GEMINI_API_KEY = "AIzaSyDG4Jr_24C893rxSdeIeVKrN5re3pKqOow"
-CLAUDE_API_KEY = "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"
-MOONSHOT_API_KEY = "sk-zOBlAOEskC6e8RQunBoPhoFuOm9LdipENn29QlHAnaPjC8lZ"
-GROK_API_KEY = "xai-VmTXn8hm0ooRx11uMqpJwd7Qm2y5f2YivKRcMwWpkYnfkih8xPAD2jHVAcYVwhy6oslIEWpgxO8CBP0V"
+
 DEEPSEEK_URL = "https://api.deepseek.com"
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 CLAUDE_URL = "https://api.anthropic.com/v1/"
