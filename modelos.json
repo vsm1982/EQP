@@ -4,5 +4,5 @@
   "Gemini": ["gemini-2.5-flash"],
   "Claude": ["claude-sonnet-4-6", "claude-haiku-4-5"],
   "Moonshot": ["kimi-k2.5", "kimi-k2.5"],
-  "GROK": ["grok-4.20-beta-0309-reasoning", "grok-4.20-beta-latest-non-reasoning"]
+  "GROK": ["grok-4.20-0309-reasoning", "grok-4.20-0309-non-reasoning"]
 }
