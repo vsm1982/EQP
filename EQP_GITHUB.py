@@ -53,7 +53,7 @@ quantidade_questoes_vf = st.number_input("Quantidade de questões do tipo Verdad
 quantidade_questoes_abertas = st.number_input("Quantidade de questões abertas", min_value=0, value=3)
 quantidade_questoes_sentence_completion = st.number_input("Quantidade de questões sentence completion (somente inglês)", min_value=0, value=3)
 quantidade_questoes_dissertativas = st.number_input("Quantidade de questões dissertativas (com exceção de inglês e matemática)", min_value=0, value=1)
-quantidade_linhas_questoes_dissertativas = st.number_input("Quantidade mínima de linhas nas questões dissertativas (com exceção de inglês e matemática)", min_value=0, value=20)
+quantidade_linhas_questoes_dissertativas = st.number_input("Quantidade mínima de linhas nas questões dissertativas (com exceção de inglês e matemática)", min_value=0, value=10)
 quantidade_questoes_interpretacao = st.number_input("Quantidade de questões de interpretação textual", min_value=0, value=5)
 
 
@@ -113,7 +113,7 @@ temperatura = st.slider(
     "Temperatura (Quanto maior o valor, mais criativo é o modelo)",
     min_value=0.0,
     max_value=1.0,
-    value=0.5,  # Valor padrão
+    value=0.0,  # Valor padrão
     step=0.1,   # Incremento (pode ser 0.01 para mais precisão)
 )
 
