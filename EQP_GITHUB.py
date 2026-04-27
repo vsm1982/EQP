@@ -160,7 +160,7 @@ if st.session_state.texto_extraido_limpo is not None:
         ## 2.1 Questões de múltipla escolha:
         - Elabore {quantidade_questoes_multipla} questões do tipo múltipla escolha, com 5 alternativas em cada questão, sendo apenas uma correta.
         ## 2.2 Questões do tipo verdadeiro/falso:
-        - Elabore {quantidade_questoes_vf} alternativas do tipo 'Verdadeiro' ou 'Falso'.
+        - Elabore {quantidade_questoes_vf} questões do tipo 'Verdadeiro' ou 'Falso'. Cada questão deve ter 5 itens.
         ## 2.3 Questões abertas: 
         Elabore {quantidade_questoes_abertas} questões subjetivas abertas.
         ## 2.4 Questões do tipo sentence completion: 
@@ -189,7 +189,7 @@ if st.session_state.texto_extraido_limpo is not None:
         - Altere fundamentalmente a estrutura: transforme questões diretas em situações-problema
         - Mude o contexto de aplicação mantendo a habilidade cognitiva requerida
         - Inverta a perspectiva (ex: em vez de "o que causa X", pergunte "qual efeito Y produz")
-        - Você pode criar contextos, exemplos e situações novas, desde que coerentes com os conceitos do conteúdo fornecido.
+        - Você pode criar contextos, exemplos e situações novas, desde que coerentes com os conceitos do conteúdo fornecido. Os contextos e exemplos podem ser criados livremente, mas os conceitos avaliados devem estar restritos aos tópicos e competências informados.
         ### 4.3.2 **VALIDAÇÃO DE ORIGINALIDADE:**
         - Antes de finalizar cada questão, verifique mentalmente se ela não é uma reformulação superficial de questões existentes
         - Garanta que pelo menos 3 elementos sejam diferentes em relação às questões originais: contexto, estrutura linguística e exemplos utilizados
