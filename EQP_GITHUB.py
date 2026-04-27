@@ -139,7 +139,22 @@ if st.session_state.texto_extraido_limpo is not None:
         # 1. Objetivo e Orientações Gerais:
         - Você está recebendo um conteúdo pedagógico escolar da(s) disciplina(s) {disciplina}, que inclui explicações e questões existentes sobre os conteúdos. Tudo o que será solicitado a seguir deve ser elaborado de acordo com tal conteúdo.
         - O texto foi extraído de um livro físico por meio de OCR, portanto, pode conter erros de reconhecimento. Considere apenas o que for inteligível e faça as correções que forem possíveis.
-        - O público alvo são crianças de {idade} anos.
+        - Se o conteúdo fornecido for insuficiente para gerar a quantidade de questões solicitada de forma coerente, informe explicitamente quais tipos de questão não puderam ser elaborados e o motivo, em vez de inventar conteúdo não presente no material.
+        - O público alvo são crianças de {idade} anos. Considere o nível de escolaridade típico de {idade} anos no Brasil (considere a tabela abaixo para enquadramento na série esperada para a idade no Brasil) para calibrar vocabulário, complexidade sintática e o tipo de raciocínio exigido nas questões.
+        Idade	Ano
+            7	1º Ano Ensino Fundamental
+            8	2º Ano Ensino Fundamental
+            9	3º Ano Ensino Fundamental
+            10	4º Ano Ensino Fundamental
+            11	5º Ano Ensino Fundamental
+            12	6º Ano Ensino Fundamental
+            13	7º Ano Ensino Fundamental
+            14	8º Ano Ensino Fundamental
+            15	9º Ano Ensino Fundamental
+            16	1º Ano Ensino Médio
+            17	2º Ano Ensino Médio
+            18	3º Ano Ensino Médio
+
         - O objetivo é elaborar questões pedagógicas que ajudem na fixação do conteúdo.
         # 2. Lista de Instruções
         ## 2.1 Questões de múltipla escolha:
@@ -158,7 +173,7 @@ if st.session_state.texto_extraido_limpo is not None:
         # 3. Orientações Adicionais
         - Use linguagem adequada à faixa etária de {idade} anos, e no caso dos itens 2.1 e 2.2, garanta que as alternativas incorretas/falsas sejam plausíveis, mas claramente erradas.
         - Considere também os tópicos de aprendizagem: {topicos} e as seguintes competências e habilidades a serem desenvolvidas: {competencias}. **MUITO IMPORTANTE: LIMITE A ELABORAÇÃO DAS QUESTÕES AOS TÓPICOS E COMPETÊNCIAS INFORMADOS, AINDA QUE O MATERIAL FORNECIDO POSSUA OUTRAS INFORMAÇÕES/CONTEÚDOS**
-        - Com exceção da disciplina **Inglês**, as questões devem ser elaboradas em português brasileiro, respeitando as normas gramaticias e ortográficoas vigentes.
+        - Com exceção da disciplina **Inglês**, as questões devem ser elaboradas em português brasileiro, respeitando as normas gramaticais e ortográficas vigentes.
         # 4. Casos Especiais
         ##  4.1 Disciplina **Matemática**
         - Quando a disciplina escolhida for **Matemática**, caso seja adequada ao conteúdo fornecido, podem ser incluídas questões que envolvam raciocínio lógico e problemas matemáticos.
@@ -189,10 +204,10 @@ if st.session_state.texto_extraido_limpo is not None:
         * 25% de questões de nível **"Difícil"** para desafiar os alunos mais avançados
         # 6. Formato de Saída Esperado:
         ## 6.1 **Organize a prova da seguinte forma:**
-        - Apresente as questões embaralhadas, não agrupando por tipo. A única exceção a esse regra são as questões dissertativas (2.6), que sempre devem ser apresentadas agrupadas ao final da prova.
+        - Intercale os tipos de questão ao longo da prova (ex: múltipla escolha, V/F, aberta, múltipla escolha...), evitando blocos contíguos do mesmo tipo. A única exceção são as questões dissertativas, que devem aparecer agrupadas ao final
         - Use numeração contínua em toda a prova (1, 2, 3... não reinicie a numeração)
         - Após cada questão, indique seu nível de dificuldade entre parênteses: (Fácil), (Médio) ou (Difícil)
-        ## 6.1 **Gabarito:**
+        ## 6.2 **Gabarito:**
         - Apresente em seção separada no final, nunca junto às questões.
         - No gabarito, use apenas letras (A, B, C, D, E) para múltipla escolha e V/F para verdadeiro/falso.
         - Para as questões abertas, inclua apenas a resposta esperada.
