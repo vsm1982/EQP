@@ -57,7 +57,7 @@ quantidade_linhas_questoes_dissertativas = st.number_input("Quantidade mínima d
 quantidade_questoes_interpretacao = st.number_input("Quantidade de questões de interpretação textual", min_value=0, value=5)
 
 
-arquivo_pdf = st.file_uploader("Escolha um arquivo PDF", type=["pdf"])
+arquivo_pdf = st.file_uploader("Escolha um arquivo PDF do tipo pesquisável", type=["pdf"])
 
 # Inicializa o session_state se não existir
 if 'texto_extraido' not in st.session_state:
@@ -102,10 +102,10 @@ if st.session_state.texto_extraido is not None:
 with open("modelos.json", "r", encoding="utf-8") as f:
     model_options: dict = json.load(f)
 
-provider = st.selectbox("Escolha o provedor:", list(model_options.keys()))
+provider = st.selectbox("Escolha o provedor de IA:", list(model_options.keys()))
 models_for_provider = model_options.get(provider, [])
 
-model = st.selectbox("Escolha o modelo:", models_for_provider)
+model = st.selectbox("Escolha o modelo de IA:", models_for_provider)
 
 st.info(f"Provedor: **{provider}** | Modelo: **{model}**")
 
