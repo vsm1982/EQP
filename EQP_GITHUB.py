@@ -48,7 +48,9 @@ disciplina = st.multiselect("Escolha a(s) disciplina(s)", ["Geografia", "Ensino 
 topicos = st.text_area("Tópicos de estudo", height=150)
 competencias = st.text_area("Competências e habilidades a serem desenvolvidas", height=150)
 
-quantidade_questoes_multipla = st.number_input("Quantidade de questões de múltipla escolha", min_value=1, value=10)
+quantidade_questoes_multipla = st.number_input("Quantidade de questões de múltipla escolha (Resposta Única)", min_value=1, value=10)
+quantidade_questoes_multipla_varios = st.number_input("Quantidade de questões de múltipla escolha (Resposta Múltipla)", min_value=1, value=10)
+quantidade_questoes_ordenacao = st.number_input("Quantidade de questões de ordenação", min_value=1, value=10)
 quantidade_questoes_vf = st.number_input("Quantidade de questões do tipo Verdadeiro ou Falso", min_value=0, value=5)
 quantidade_questoes_abertas = st.number_input("Quantidade de questões abertas", min_value=0, value=3)
 quantidade_questoes_sentence_completion = st.number_input("Quantidade de questões sentence completion (somente inglês)", min_value=0, value=3)
@@ -157,21 +159,25 @@ if st.session_state.texto_extraido_limpo is not None:
 
         - O objetivo é elaborar questões pedagógicas que ajudem na fixação do conteúdo.
         # 2. Lista de Instruções
-        ## 2.1 Questões de múltipla escolha:
+        ## 2.1 Questões de múltipla escolha (Resposta Única):
         - Elabore {quantidade_questoes_multipla} questões do tipo múltipla escolha, com 5 alternativas em cada questão, sendo apenas uma correta.
-        ## 2.2 Questões do tipo verdadeiro/falso:
+        ## 2.2 Questões de múltipla escolha (Resposta Múltipla):
+        - Elabore {quantidade_questoes_multipla_varios} questões do tipo múltipla escolha, com 5 alternativas em cada questão, podendo haver mais de uma correta.
+        ## 2.3 Questões do tipo verdadeiro/falso:
         - Elabore {quantidade_questoes_vf} questões do tipo 'Verdadeiro' ou 'Falso'. Cada questão deve ter 5 itens.
-        ## 2.3 Questões abertas: 
+        ## 2.4 Questões do tipo ordenação:
+        - Elabore {quantidade_questoes_ordenacao} questões do tipo ordenação lógica ou cronológica. Cada questão deve ter 5 itens. Apresente os itens embaralhados com letras A–E e peça ao aluno que numere na ordem correta.
+        ## 2.5 Questões abertas: 
         Elabore {quantidade_questoes_abertas} questões subjetivas abertas.
-        ## 2.4 Questões do tipo sentence completion: 
+        ## 2.6 Questões do tipo sentence completion: 
         - Somente para a disciplina **Inglês**, elabore {quantidade_questoes_sentence_completion} questões do tipo sentence completion.
-        ## 2.5 Questões do tipo interpretação textual:
+        ## 2.7 Questões do tipo interpretação textual:
         Elabore {quantidade_questoes_interpretacao} questões de interpretação textual, que devem ser do tipo aberta.
-        - Importante: considerando que a criança não terá acesso ao material de estudo na hora da prova, todas as questões de interpretação textual devem incluir o trecho de texto que permita a realização da interpretação. O tamanho do trecho deve variar conforme a questão proposta, dentro das habilidades esperadas para a faixa etária de {idade} anos.
-        ## 2.6 Questões dissertativas: 
+        - Importante: considerando que a criança não terá acesso ao material de estudo na hora da prova, todas as questões de interpretação textual devem incluir o trecho de texto que permita a realização da interpretação, que necessariamente deve ser extraído do material fornecido. Considerando que o material foi extraído via OCR e pode conter algumas imprecisões, .pequenas correções ortográficas ou de palavras claramente corrompidas pelo OCR são toleradas, mas o trecho deve preservar fielmente o conteúdo e a estrutura do original. O tamanho do trecho deve variar conforme a questão proposta, dentro das habilidades esperadas para a faixa etária de {idade} anos.
+        ## 2.8 Questões dissertativas: 
         - Com exceção das disciplinas **Matemática** e **Inglês**, elabore {quantidade_questoes_dissertativas} questões dissertativas, que devem ser respondidas com um mínimo de {quantidade_linhas_questoes_dissertativas} linhas, abordando os tópicos mais relevantes do conteúdo fornecido (informar que a pergunta precisa ser respondida com o mínimo de linhas informado). Para as disciplinas **Matemática** e **Inglês** esse item deve ser ignorado.
         # 3. Orientações Adicionais
-        - Use linguagem adequada à faixa etária de {idade} anos, e no caso dos itens 2.1 e 2.2, garanta que as alternativas incorretas/falsas sejam plausíveis, mas claramente erradas.
+        - Use linguagem adequada à faixa etária de {idade} anos, e no caso dos itens 2.1, 2.2 e 2.3, garanta que as alternativas incorretas/falsas sejam plausíveis, mas claramente erradas.
         - Considere também os tópicos de aprendizagem: {topicos} e as seguintes competências e habilidades a serem desenvolvidas: {competencias}. **MUITO IMPORTANTE: LIMITE A ELABORAÇÃO DAS QUESTÕES AOS TÓPICOS E COMPETÊNCIAS INFORMADOS, AINDA QUE O MATERIAL FORNECIDO POSSUA OUTRAS INFORMAÇÕES/CONTEÚDOS**
         - Com exceção da disciplina **Inglês**, as questões devem ser elaboradas em português brasileiro, respeitando as normas gramaticais e ortográficas vigentes.
         # 4. Casos Especiais
