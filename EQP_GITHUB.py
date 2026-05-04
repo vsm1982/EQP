@@ -204,6 +204,7 @@ if st.session_state.texto_extraido_limpo is not None:
         - Dê prioridade aos conceitos mais fundamentais do conteúdo fornecido
         - Para cada conceito importante, crie pelo menos uma questão de cada tipo solicitado
         - Após cada questão, informe entre parênteses a qual tópico ela se refere.
+        - Com relação aos itens 2.1 e 2.2, deixe claro em cada questão se a resposta esperada é única ou múltipla.
         - Distribua os níveis de dificuldade de forma pedagogicamente apropriada: 
         * 50% de questões de nível **"Médio"**
         * 25% questões de nível **"Fácil"** para consolidar conceitos básicos
