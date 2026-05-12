@@ -24,9 +24,9 @@
         ## 2.2 Questões de múltipla escolha (Resposta Múltipla):
         - Elabore {quantidade_questoes_multipla_varios} questões do tipo múltipla escolha, com 5 alternativas em cada questão, podendo haver mais de uma correta.
         ## 2.3 Questões do tipo verdadeiro/falso:
-        - Elabore {quantidade_questoes_vf} questões do tipo 'Verdadeiro' ou 'Falso'. Cada questão deve ter 5 itens.
+        - Elabore {quantidade_questoes_vf} questões do tipo 'Verdadeiro' ou 'Falso'. Cada questão deve ter 5 itens, precedidos de "( )" para inserção da resposta.
         ## 2.4 Questões do tipo ordenação:
-        - Elabore {quantidade_questoes_ordenacao} questões do tipo ordenação lógica ou cronológica. Cada questão deve ter 5 itens. Apresente os itens embaralhados e peça ao aluno que numere na ordem correta. Garanta que a sequência embaralhada apresentada ao aluno seja visivelmente distinta da ordem correta
+        - Elabore {quantidade_questoes_ordenacao} questões do tipo ordenação lógica ou cronológica. Cada questão deve ter 5 itens. Apresente os itens embaralhados, precedidos de "( )" para inserção da resposta, e peça ao aluno que numere na ordem correta. Garanta que a sequência embaralhada apresentada ao aluno seja visivelmente distinta da ordem correta
         ## 2.5 Questões abertas: 
         Elabore {quantidade_questoes_abertas} questões subjetivas abertas.
         ## 2.6 Questões do tipo sentence completion: 
@@ -87,7 +87,7 @@
         ## 6.1 **Organize a prova da seguinte forma:**
         - Nunca repita o mesmo tipo de questão por mais de 2 questões consecutivas (exceto dissertativas, que, caso tenha sido elaborada, sempre deve ser apresentada ao final)
         - Use numeração contínua em toda a prova (1, 2, 3... não reinicie a numeração)
-        - Após cada questão, indique seu nível de dificuldade entre parênteses: (Fácil), (Médio) ou (Difícil)
+       
         
         ## 6.2 **Gabarito:**
         - Apresente em seção separada no final, nunca junto às questões.
