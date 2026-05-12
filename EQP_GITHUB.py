@@ -158,7 +158,7 @@ if st.session_state.texto_extraido_limpo is not None:
             quantidade_linhas_questoes_dissertativas=quantidade_linhas_questoes_dissertativas,
             topicos=topicos,
             competencias=competencias,
-            st.session_state.texto_extraido_limpo=st.session_state.texto_extraido_limpo
+            texto_extraido_limpo=st.session_state.texto_extraido_limpo
         )
         try:
             
