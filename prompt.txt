@@ -87,8 +87,6 @@
         ## 6.1 **Organize a prova da seguinte forma:**
         - Nunca repita o mesmo tipo de questão por mais de 2 questões consecutivas (exceto dissertativas, que, caso tenha sido elaborada, sempre deve ser apresentada ao final)
         - Use numeração contínua em toda a prova (1, 2, 3... não reinicie a numeração)
-       
-        
         ## 6.2 **Gabarito:**
         - Apresente em seção separada no final, nunca junto às questões.
         - No gabarito, use apenas letras (A, B, C, D, E) para múltipla escolha e V/F para verdadeiro/falso.
@@ -98,3 +96,7 @@
         - Não repita o texto das questões no gabarito
         # 7. Conteúdo pedagógico fornecido:
         {texto_extraido_limpo}
+		# 8. **ANTES DE ENTREGAR A PROVA**:
+		1. Calcule a soma total de todas as pontuações
+		2. Se a soma for DIFERENTE de 100 (±0,2), reajuste as pontuações
+		3. Informe no final: "SOMA TOTAL DE PONTOS: [valor]"
