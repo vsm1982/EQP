@@ -83,4 +83,4 @@
         - Para as questões de sentence completion, inclua apenas a palavra correta para cada subitem.
         - Não repita o texto das questões no gabarito
         # 7. Conteúdo pedagógico fornecido:
-        {st.session_state.texto_extraido_limpo}
+        {texto_extraido_limpo}
