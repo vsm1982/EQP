@@ -136,7 +136,7 @@ if st.session_state.texto_extraido_limpo is not None:
          client = OpenAI(api_key=pwd, base_url=MOONSHOT_URL)
         elif provider == "GROK":
          client = OpenAI(api_key=pwd, base_url=GROK_URL) 
-    # Requisição
+    
         
         # 1. Carrega o conteúdo "cru" do txt
         with open("prompt.txt", "r", encoding="utf-8") as f:
