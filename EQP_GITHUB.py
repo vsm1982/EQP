@@ -161,35 +161,30 @@ if st.session_state.texto_extraido_limpo is not None:
             texto_extraido_limpo=st.session_state.texto_extraido_limpo
         )
         try:
-            
             response = client.chat.completions.create(
-                    model=model,
-                    messages=[
-                        {"role": "system", "content": f"Você é um assistente pedagógico especializado em criar questões para crianças de {idade} anos."},
-                        {"role": "user", "content": prompt_usuario}
-                    ],
-                    temperature=temperatura
-
-        )
+                model=model,
+                messages=[
+                    {"role": "system", "content": f"Você é um assistente pedagógico especializado em criar questões para crianças de {idade} anos."},
+                    {"role": "user", "content": prompt_usuario}
+                ],
+                temperature=temperatura
+            )
 
             # Extrai o conteúdo da resposta
             conteudo_resposta = response.choices[0].message.content
-
             # Exibe sucesso e conteúdo
             st.success("Questões geradas com sucesso!")
             st.write("Modelo utilizado:", model)
             st.subheader("Resposta da API:")
             st.write(conteudo_resposta)
-
-            nome_arquivo = f"questoes_{disciplina}_{model}_{datetime.now().strftime('%Y-%m-%d_%H-%M')}.txt"
-
+            nome_arquivo = f"questoes_{'_'.join(disciplina)}_{model}_{datetime.now().strftime('%Y-%m-%d_%H-%M')}.txt"
             # Botão para baixar como.txt
             st.download_button(
                 label="📥 Baixar questões em arquivo .txt",
                 data=conteudo_resposta,
                 file_name=nome_arquivo,
                 mime="text/plain"
-        )
+            )
 
         except Exception as e:
             st.error(f"Erro na requisição: {e}")
