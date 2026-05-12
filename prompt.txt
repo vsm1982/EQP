@@ -64,11 +64,23 @@
         - Dê prioridade aos conceitos mais fundamentais do conteúdo fornecido
         - Para cada conceito importante, crie pelo menos uma questão de cada tipo solicitado
         - Com relação aos itens 2.1 e 2.2, deixe claro em cada questão se a resposta esperada é única ou múltipla.
-		- Atribua pontuações para cada questão formulada de forma proporcional à dificuldade. Questões Fáceis valem 1 ponto-base, Médias valem 1,5 e Difíceis valem 2. Normalize proporcionalmente para que o total seja 100.
+		- Atribua pontuações para cada questão formulada de forma proporcional à dificuldade, **de acordo com a seguinte regra**:
+		Para calcular a pontuação de cada questão, siga os passos abaixo:
+		Atribua pesos brutos: Fácil = 1, Médio = 2, Difícil = 3
+		Calcule o total de pontos brutos somando o peso de cada questão
+		Divida 100 pelo total de pontos brutos para obter o fator de escala
+		Multiplique o peso de cada questão pelo fator de escala para obter sua pontuação final
+		Arredonde os valores para no máximo 1 casa decimal
+		Ajuste a última questão, se necessário, para garantir que a soma seja exatamente 100"*
+		Exemplo: 3 questões Fáceis, 4 Médias e 2 Difíceis → pesos brutos: (3×1) + (4×2) + (2×3) = 17 → fator = 100/17 ≈ 5,88 → Fácil vale 5,9 pts, Média vale 11,8 pts, Difícil vale 17,6 pts → ajuste fino na última questão para fechar 100.
         - Distribua os níveis de dificuldade de forma pedagogicamente apropriada: 
         * 50% de questões de nível **"Médio"**
         * 25% questões de nível **"Fácil"** para consolidar conceitos básicos
         * 25% de questões de nível **"Difícil"** para desafiar os alunos mais avançados
+		- As questões devem ser classificadas de acordo com os critérios abaixo:
+		Fácil: Exige apenas memorização ou reconhecimento direto de informação presente no texto. O aluno localiza ou reproduz o conteúdo sem precisar interpretá-lo ou relacioná-lo a outros conceitos. Vocabulário simples e estrutura direta.
+		Médio: Exige compreensão e aplicação do conteúdo. O aluno precisa interpretar, comparar ou aplicar o conceito em um contexto ligeiramente diferente do que foi apresentado no material. Pode envolver mais de uma informação simultânea.
+		Difícil: Exige análise, síntese ou avaliação. O aluno precisa relacionar múltiplos conceitos, identificar causa e efeito, tirar conclusões não explícitas no texto, ou resolver um problema com múltiplas etapas de raciocínio
 		- A distribuição de dificuldade deve ser aplicada sobre o conjunto total de questões da prova, não necessariamente dentro de cada tipo.
 		- Indique o valor da questão entre colchetes e o nível de dificuldade entre parênteses: [X pontos] (Médio)
         # 6. Formato de Saída Esperado:
