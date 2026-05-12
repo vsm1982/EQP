@@ -135,96 +135,31 @@ if st.session_state.texto_extraido_limpo is not None:
         elif provider == "Moonshot":
          client = OpenAI(api_key=pwd, base_url=MOONSHOT_URL)
         elif provider == "GROK":
-         client = OpenAI(api_key=pwd, base_url=GROK_URL)
+         client = OpenAI(api_key=pwd, base_url=GROK_URL) 
     # Requisição
-        prompt_usuario = f"""
-        # 1. Objetivo e Orientações Gerais:
-        - Você está recebendo um conteúdo pedagógico escolar da(s) disciplina(s) {disciplina}, que inclui explicações e questões existentes sobre os conteúdos. Tudo o que será solicitado a seguir deve ser elaborado de acordo com tal conteúdo.
-        - O texto foi extraído de um livro físico por meio de OCR, portanto, pode conter erros de reconhecimento. Considere apenas o que for inteligível e faça as correções que forem possíveis.
-        - Se o conteúdo fornecido for insuficiente para gerar a quantidade de questões solicitada de forma coerente, informe explicitamente quais tipos de questão não puderam ser elaborados e o motivo, em vez de inventar conteúdo não presente no material.
-        - O público alvo são crianças de {idade} anos. Considere o nível de escolaridade típico de {idade} anos no Brasil (considere a tabela abaixo para enquadramento na série esperada para a idade no Brasil) para calibrar vocabulário, complexidade sintática e o tipo de raciocínio exigido nas questões.
-        Idade	Ano
-            7	1º Ano Ensino Fundamental
-            8	2º Ano Ensino Fundamental
-            9	3º Ano Ensino Fundamental
-            10	4º Ano Ensino Fundamental
-            11	5º Ano Ensino Fundamental
-            12	6º Ano Ensino Fundamental
-            13	7º Ano Ensino Fundamental
-            14	8º Ano Ensino Fundamental
-            15	9º Ano Ensino Fundamental
-            16	1º Ano Ensino Médio
-            17	2º Ano Ensino Médio
-            18	3º Ano Ensino Médio
-
-        - O objetivo é elaborar questões pedagógicas que ajudem na fixação do conteúdo.
-        # 2. Lista de Instruções
-        ## 2.1 Questões de múltipla escolha (Resposta Única):
-        - Elabore {quantidade_questoes_multipla} questões do tipo múltipla escolha, com 5 alternativas em cada questão, sendo apenas uma correta.
-        ## 2.2 Questões de múltipla escolha (Resposta Múltipla):
-        - Elabore {quantidade_questoes_multipla_varios} questões do tipo múltipla escolha, com 5 alternativas em cada questão, podendo haver mais de uma correta.
-        ## 2.3 Questões do tipo verdadeiro/falso:
-        - Elabore {quantidade_questoes_vf} questões do tipo 'Verdadeiro' ou 'Falso'. Cada questão deve ter 5 itens.
-        ## 2.4 Questões do tipo ordenação:
-        - Elabore {quantidade_questoes_ordenacao} questões do tipo ordenação lógica ou cronológica. Cada questão deve ter 5 itens. Apresente os itens embaralhados com letras A–E e peça ao aluno que numere na ordem correta.
-        ## 2.5 Questões abertas: 
-        Elabore {quantidade_questoes_abertas} questões subjetivas abertas.
-        ## 2.6 Questões do tipo sentence completion: 
-        - Somente para a disciplina **Inglês**, elabore {quantidade_questoes_sentence_completion} questões do tipo sentence completion.
-        ## 2.7 Questões do tipo interpretação textual:
-        Elabore {quantidade_questoes_interpretacao} questões de interpretação textual, que devem ser do tipo aberta.
-        - Importante: considerando que a criança não terá acesso ao material de estudo na hora da prova, todas as questões de interpretação textual devem incluir o trecho de texto que permita a realização da interpretação, que necessariamente deve ser extraído do material fornecido. Considerando que o material foi extraído via OCR e pode conter algumas imprecisões, .pequenas correções ortográficas ou de palavras claramente corrompidas pelo OCR são toleradas, mas o trecho deve preservar fielmente o conteúdo e a estrutura do original. O tamanho do trecho deve variar conforme a questão proposta, dentro das habilidades esperadas para a faixa etária de {idade} anos.
-        ## 2.8 Questões dissertativas: 
-        - Com exceção das disciplinas **Matemática** e **Inglês**, elabore {quantidade_questoes_dissertativas} questões dissertativas, que devem ser respondidas com um mínimo de {quantidade_linhas_questoes_dissertativas} linhas, abordando os tópicos mais relevantes do conteúdo fornecido (informar que a pergunta precisa ser respondida com o mínimo de linhas informado). Para as disciplinas **Matemática** e **Inglês** esse item deve ser ignorado.
-        # 3. Orientações Adicionais
-        - Use linguagem adequada à faixa etária de {idade} anos, e no caso dos itens 2.1, 2.2 e 2.3, garanta que as alternativas incorretas/falsas sejam plausíveis, mas claramente erradas.
-        - Considere também os tópicos de aprendizagem: {topicos} e as seguintes competências e habilidades a serem desenvolvidas: {competencias}. **MUITO IMPORTANTE: LIMITE A ELABORAÇÃO DAS QUESTÕES AOS TÓPICOS E COMPETÊNCIAS INFORMADOS, AINDA QUE O MATERIAL FORNECIDO POSSUA OUTRAS INFORMAÇÕES/CONTEÚDOS**
-        - Com exceção da disciplina **Inglês**, as questões devem ser elaboradas em português brasileiro, respeitando as normas gramaticais e ortográficas vigentes.
-        # 4. Casos Especiais
-        ##  4.1 Disciplina **Matemática**
-        - Quando a disciplina escolhida for **Matemática**, caso seja adequada ao conteúdo fornecido, podem ser incluídas questões que envolvam raciocínio lógico e problemas matemáticos.
-        ## 4.2 Disciplina **Inglês**
-        - As questões de sentence completion devem ter foco em vocabulário e/ou gramática.
-        - Todo o output (questões, alternativas, gabarito) deve ser produzido em **LÍNGUA INGLESA**.
-        - Cada questão de sentence completion deve conter de 5 a 10 subitens, todos sobre o mesmo tema. **Não misture temáticas diferentes em uma mesma questão. Se a questão é sobre tempos verbais, todas as subquestões devem tratar de tempos verbais. Se a questão é sobre vocabulário, todas as subquestões devem tratar de vocabulário.**
-        - O inglês é a segunda língua da criança. Desta forma, não use vocabulário fora do material fornecido, nem estruturas avançadas demais para a idade.
-        ## 4.3 Questões existentes no conteúdo fornecido:
-        - **NUNCA repita as questões originais** presentes no material. Crie variações que avaliem os mesmos conceitos, mas com formulação diferente e contextos alternativos, sempre respeitanto o conteúdo fornecido. 
-        ### 4.3.1 **ESTRATÉGIAS DE VARIAÇÃO OBRIGATÓRIAS:**
-        - Identifique o conceito central de cada questão original e crie uma nova pergunta que avalie o mesmo conceito
-        - Altere fundamentalmente a estrutura: transforme questões diretas em situações-problema
-        - Mude o contexto de aplicação mantendo a habilidade cognitiva requerida
-        - Inverta a perspectiva (ex: em vez de "o que causa X", pergunte "qual efeito Y produz")
-        - Você pode criar contextos, exemplos e situações novas, desde que coerentes com os conceitos do conteúdo fornecido. Os contextos e exemplos podem ser criados livremente, mas os conceitos avaliados devem estar restritos aos tópicos e competências informados.
-        ### 4.3.2 **VALIDAÇÃO DE ORIGINALIDADE:**
-        - Antes de finalizar cada questão, verifique mentalmente se ela não é uma reformulação superficial de questões existentes
-        - Garanta que pelo menos 3 elementos sejam diferentes em relação às questões originais: contexto, estrutura linguística e exemplos utilizados
-        - Priorize questões que exijam aplicação do conhecimento em vez de reprodução direta
-        # 5. Orientações finais:
-        - Dê prioridade aos conceitos mais fundamentais do conteúdo fornecido
-        - Para cada conceito importante, crie pelo menos uma questão de cada tipo solicitado
-        - Após cada questão, informe entre parênteses a qual tópico ela se refere.
-        - Com relação aos itens 2.1 e 2.2, deixe claro em cada questão se a resposta esperada é única ou múltipla.
-        - Distribua os níveis de dificuldade de forma pedagogicamente apropriada: 
-        * 50% de questões de nível **"Médio"**
-        * 25% questões de nível **"Fácil"** para consolidar conceitos básicos
-        * 25% de questões de nível **"Difícil"** para desafiar os alunos mais avançados
-        # 6. Formato de Saída Esperado:
-        ## 6.1 **Organize a prova da seguinte forma:**
-        - Intercale os tipos de questão ao longo da prova (ex: múltipla escolha, V/F, aberta, múltipla escolha...), evitando blocos contíguos do mesmo tipo. A única exceção são as questões dissertativas, que devem aparecer agrupadas ao final
-        - Use numeração contínua em toda a prova (1, 2, 3... não reinicie a numeração)
-        - Após cada questão, indique seu nível de dificuldade entre parênteses: (Fácil), (Médio) ou (Difícil)
-        - Atribua pontuações para cada questão formulada de forma proporcional à dificuldade. Certifique-se que o somatório de todas as questões resulte no valor exato de 100 pontos, que é o valor total da prova.
-        ## 6.2 **Gabarito:**
-        - Apresente em seção separada no final, nunca junto às questões.
-        - No gabarito, use apenas letras (A, B, C, D, E) para múltipla escolha e V/F para verdadeiro/falso.
-        - Para as questões abertas, inclua apenas a resposta esperada.
-        - Para as questões dissertativas, inclua a resposta esperada resumida e indique quais tópicos deveriam ser abordados.
-        - Para as questões de sentence completion, inclua apenas a palavra correta para cada subitem.
-        - Não repita o texto das questões no gabarito
-        # 7. Conteúdo pedagógico fornecido:
-        {st.session_state.texto_extraido_limpo}"""
-
+        
+        # 1. Carrega o conteúdo "cru" do txt
+        with open("prompt.txt", "r", encoding="utf-8") as f:
+            template_prompt = f.read()
+    
+        
+        # 3. Injeta a variável no texto lido
+        prompt_usuario = template_prompt.format(
+            disciplina=disciplina,
+            idade=idade,
+            quantidade_questoes_multipla=quantidade_questoes_multipla,
+            quantidade_questoes_multipla_varios=quantidade_questoes_multipla_varios,
+            quantidade_questoes_vf=quantidade_questoes_vf,
+            quantidade_questoes_ordenacao=quantidade_questoes_ordenacao,
+            quantidade_questoes_abertas=quantidade_questoes_abertas,
+            quantidade_questoes_sentence_completion=quantidade_questoes_sentence_completion,
+            quantidade_questoes_interpretacao=quantidade_questoes_interpretacao,
+            quantidade_questoes_dissertativas=quantidade_questoes_dissertativas,
+            quantidade_linhas_questoes_dissertativas=quantidade_linhas_questoes_dissertativas,
+            topicos=topicos,
+            competencias=competencias,
+            st.session_state.texto_extraido_limpo=st.session_state.texto_extraido_limpo
+        )
         try:
             
             response = client.chat.completions.create(
