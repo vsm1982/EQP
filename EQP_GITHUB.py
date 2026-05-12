@@ -214,6 +214,7 @@ if st.session_state.texto_extraido_limpo is not None:
         - Intercale os tipos de questão ao longo da prova (ex: múltipla escolha, V/F, aberta, múltipla escolha...), evitando blocos contíguos do mesmo tipo. A única exceção são as questões dissertativas, que devem aparecer agrupadas ao final
         - Use numeração contínua em toda a prova (1, 2, 3... não reinicie a numeração)
         - Após cada questão, indique seu nível de dificuldade entre parênteses: (Fácil), (Médio) ou (Difícil)
+        - Atribua pontuações para cada questão formulada de forma proporcional à dificuldade. Certifique-se que o somatório de todas as questões resulte no valor exato de 100 pontos, que é o valor total da prova.
         ## 6.2 **Gabarito:**
         - Apresente em seção separada no final, nunca junto às questões.
         - No gabarito, use apenas letras (A, B, C, D, E) para múltipla escolha e V/F para verdadeiro/falso.
