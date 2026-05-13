@@ -8,7 +8,12 @@ from datetime import datetime
 import os
 import json
 
-
+st.set_page_config(
+    page_title="EQP - Elaborador de Questões de Prova",
+    page_icon="👨‍🎓",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
 
 
 # Função para extrair texto diretamente do PDF
