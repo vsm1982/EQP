@@ -49,7 +49,19 @@ GROK_URL = "https://api.x.ai/v1"
 
 
 idade = st.selectbox("Idade da criança", list(range(6, 19)))
-disciplina = st.multiselect("Escolha a(s) disciplina(s)", ["Geografia", "Ensino Religioso", "História", "Matemática", "Língua Portuguesa", "Ciências", "Inglês", "Filosofia", "Educação Física", "Artes"])
+
+disciplinas_lista = [
+    "Geografia", "Ensino Religioso", "História", "Matemática",
+    "Língua Portuguesa", "Ciências", "Inglês",
+    "Filosofia", "Educação Física", "Artes"
+]
+disciplinas_ordenadas = sorted(disciplinas_lista)
+
+disciplina = st.multiselect(
+    "Escolha a(s) disciplina(s)",
+    disciplinas_ordenadas
+)
+
 topicos = st.text_area("Tópicos de estudo", height=150)
 competencias = st.text_area("Competências e habilidades a serem desenvolvidas", height=150)
 
