@@ -52,8 +52,8 @@ idade = st.selectbox("Idade da criança", list(range(6, 19)))
 
 disciplinas_lista = [
     "Geografia", "Ensino Religioso", "História", "Matemática",
-    "Língua Portuguesa", "Ciências", "Inglês",
-    "Filosofia", "Educação Física", "Artes"
+    "Língua Portuguesa", "Ciências da Natureza", "Inglês",
+    "Filosofia", "Educação Física", "Artes". "Ciências Humanas", "Linguagens"
 ]
 disciplinas_ordenadas = sorted(disciplinas_lista)
 
