@@ -72,7 +72,7 @@ quantidade_questoes_vf = st.number_input("Quantidade de questões do tipo Verdad
 quantidade_questoes_abertas = st.number_input("Quantidade de questões abertas", min_value=0, value=3)
 quantidade_questoes_sentence_completion = st.number_input("Quantidade de questões sentence completion (somente inglês)", min_value=0, value=3)
 quantidade_questoes_dissertativas = st.number_input("Quantidade de questões dissertativas", min_value=0, value=1)
-quantidade_linhas_questoes_dissertativas = st.number_input("Quantidade mínima de linhas nas questões dissertativas (com exceção de inglês e matemática)", min_value=0, value=10)
+quantidade_linhas_questoes_dissertativas = st.number_input("Quantidade mínima de linhas nas questões dissertativas", min_value=0, value=10)
 quantidade_questoes_interpretacao = st.number_input("Quantidade de questões de interpretação textual", min_value=0, value=5)
 
 
