@@ -184,7 +184,7 @@ if st.session_state.texto_extraido_limpo is not None:
                     {"role": "user", "content": prompt_usuario}
                 ],
                 temperature=temperatura,
-                max_tokens = 20000
+                max_tokens = 35000
             )
 
             # Extrai o conteúdo da resposta
