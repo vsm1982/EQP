@@ -56,7 +56,7 @@ disciplinas_lista = [
     "Filosofia", "Educação Física", "Artes", "Ciências Humanas", "Linguagens"
 ]
 disciplinas_ordenadas = sorted(disciplinas_lista)
-
+st.header("Disciplina e Tópicos de Estudo")
 disciplina = st.multiselect(
     "Escolha a(s) disciplina(s)",
     disciplinas_ordenadas
@@ -64,7 +64,7 @@ disciplina = st.multiselect(
 
 topicos = st.text_area("Tópicos de estudo", height=150)
 competencias = st.text_area("Competências e habilidades a serem desenvolvidas", height=150)
-
+st.header("Tipos de Questões")
 quantidade_questoes_multipla = st.number_input("1. Quantidade de questões de múltipla escolha (Resposta Única)", min_value=0, value=0)
 quantidade_questoes_multipla_varios = st.number_input("2. Quantidade de questões de múltipla escolha (Resposta Múltipla)", min_value=0, value=0)
 quantidade_questoes_ordenacao = st.number_input("3. Quantidade de questões de ordenação", min_value=0, value=0)
@@ -75,6 +75,7 @@ quantidade_questoes_sentence_completion = st.number_input("7. Quantidade de ques
 quantidade_questoes_dissertativas = st.number_input("8. Quantidade de questões dissertativas", min_value=0, value=0)
 quantidade_linhas_questoes_dissertativas = st.number_input("  8.1 Quantidade mínima de linhas nas questões dissertativas", min_value=0, value=0)
 
+st.header("Material de estudo em PDF"
 arquivo_pdf = st.file_uploader("Escolha um arquivo PDF do tipo pesquisável", type=["pdf"])
 
 # Inicializa o session_state se não existir
@@ -119,7 +120,7 @@ if st.session_state.texto_extraido is not None:
 # --- Carrega provedores e modelos do arquivo JSON ---
 with open("modelos.json", "r", encoding="utf-8") as f:
     model_options: dict = json.load(f)
-
+st.header("Modelos de IA")
 provider = st.selectbox("Escolha o provedor de IA:", list(model_options.keys()))
 models_for_provider = model_options.get(provider, [])
 
