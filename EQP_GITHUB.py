@@ -75,7 +75,7 @@ quantidade_questoes_sentence_completion = st.number_input("7. Quantidade de ques
 quantidade_questoes_dissertativas = st.number_input("8. Quantidade de questões dissertativas", min_value=0, value=0)
 quantidade_linhas_questoes_dissertativas = st.number_input("  8.1 Quantidade mínima de linhas nas questões dissertativas", min_value=0, value=0)
 
-st.header("Material de estudo em PDF"
+st.header("Material de estudo em PDF")
 arquivo_pdf = st.file_uploader("Escolha um arquivo PDF do tipo pesquisável", type=["pdf"])
 
 # Inicializa o session_state se não existir
