@@ -1,5 +1,5 @@
 {
-  "OpenAI": ["gpt-4.1", "gpt-5", "gpt-5.4"],
+  "OpenAI": ["gpt-4.1", "gpt-5", "gpt-5.5"],
   "DeepSeek": ["deepseek-v4-flash", "deepseek-v4-pro"],
   "Gemini": ["gemini-2.5-flash"],
   "Claude": ["claude-sonnet-4-6", "claude-haiku-4-5"],
