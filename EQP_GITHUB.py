@@ -47,7 +47,7 @@ CLAUDE_URL = "https://api.anthropic.com/v1/"
 MOONSHOT_URL = "https://api.moonshot.ai/v1"
 GROK_URL = "https://api.x.ai/v1"
 
-
+st.header("Faixa Etária")
 idade = st.selectbox("Idade da criança", list(range(6, 19)))
 
 disciplinas_lista = [
