@@ -65,7 +65,7 @@ disciplina = st.multiselect(
 topicos = st.text_area("Tópicos de estudo", height=150)
 competencias = st.text_area("Competências e habilidades a serem desenvolvidas", height=150)
 
-quantidade_questoes_multipla = st.number_input("1. Quantidade de questões de múltipla escolha (Resposta Única)", min_value=1, value=10)
+quantidade_questoes_multipla = st.number_input("1. Quantidade de questões de múltipla escolha (Resposta Única)", min_value=0, value=0)
 quantidade_questoes_multipla_varios = st.number_input("2. Quantidade de questões de múltipla escolha (Resposta Múltipla)", min_value=1, value=10)
 quantidade_questoes_ordenacao = st.number_input("3. Quantidade de questões de ordenação", min_value=1, value=10)
 quantidade_questoes_vf = st.number_input("4. Quantidade de questões do tipo Verdadeiro ou Falso", min_value=0, value=5)
