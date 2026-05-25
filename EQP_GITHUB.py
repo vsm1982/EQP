@@ -186,7 +186,7 @@ if st.session_state.texto_extraido_limpo is not None:
                 ],
                 temperature=temperatura,
                 max_tokens = 35000,
-                timeout = 500.00
+                timeout = 900.00
             )
 
             # Extrai o conteúdo da resposta
