@@ -150,7 +150,7 @@ if st.session_state.texto_extraido_limpo is not None:
         elif provider == "DeepSeek":
          client = OpenAI(api_key=pwd, base_url=DEEPSEEK_URL, timeout=300.0, max_retries=0)
         elif provider == "Moonshot":
-         client = OpenAI(api_key=pwd, base_url=MOONSHOT_URL, timeout=300.0, max_retries=0)
+         client = OpenAI(api_key=pwd, base_url=MOONSHOT_URL, timeout=600.0, max_retries=0)
         elif provider == "GROK":
          client = OpenAI(api_key=pwd, base_url=GROK_URL, timeout=300.0, max_retries=0) 
     
@@ -185,8 +185,7 @@ if st.session_state.texto_extraido_limpo is not None:
                     {"role": "user", "content": prompt_usuario}
                 ],
                 temperature=temperatura,
-                max_tokens = 35000,
-                timeout = 900.00
+                max_tokens = 35000
             )
 
             # Extrai o conteúdo da resposta
