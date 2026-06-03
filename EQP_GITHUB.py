@@ -184,8 +184,7 @@ if st.session_state.texto_extraido_limpo is not None:
                     {"role": "system", "content": f"Você é um assistente pedagógico especializado em criar questões para crianças de {idade} anos."},
                     {"role": "user", "content": prompt_usuario}
                 ],
-                temperature=temperatura,
-                max_tokens = 35000
+                temperature=temperatura
             )
 
             # Extrai o conteúdo da resposta
