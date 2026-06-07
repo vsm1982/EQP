@@ -188,7 +188,8 @@ if st.session_state.texto_extraido_limpo is not None:
             )
 
             # Extrai o conteúdo da resposta
-            conteudo_resposta = response.choices[0].message.content
+            conteudo_resposta_raw = response.choices[0].message.content
+            conteudo_resposta = st.markdown(conteudo_resposta_raw)
             # Exibe sucesso e conteúdo
             st.success("Questões geradas com sucesso!")
             st.write("Modelo utilizado:", model)
