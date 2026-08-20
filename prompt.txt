@@ -43,6 +43,7 @@
         # 4. Casos Especiais
         ##  4.1 Disciplina **Matemática**
         - Quando a disciplina escolhida for **Matemática**, caso seja adequada ao conteúdo fornecido, podem ser incluídas questões que envolvam raciocínio lógico e problemas matemáticos.
+		- Não use nenhuma formatação LaTeX ou notação científica codificada em suas respostas. Para qualquer operação matemática, escreva apenas em texto puro e linear, utilizando os símbolos padrão do teclado (como +, -, /, *, ^). Não use delimitadores como \( \) ou \[ \]. Escreva fórmulas e equações de forma corrida, na mesma linha, como se estivesse digitando em um bloco de notas simples.
         ## 4.2 Disciplina **Inglês**
         - As questões de sentence completion devem ter foco em vocabulário e/ou gramática.
         - Todo o output (questões, alternativas, gabarito) deve ser produzido em **LÍNGUA INGLESA**.
