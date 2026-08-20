@@ -1,6 +1,6 @@
 {
   "OpenAI": ["gpt-4.1", "gpt-5", "gpt-5.4", "gpt-5.6-terra"],
   "DeepSeek": ["deepseek-v4-flash", "deepseek-v4-pro"],
-  "Claude": ["claude-sonnet-4-6", "claude-haiku-4-5"],
+  "Claude": ["claude-sonnet-4-6", "claude-sonnet-5", "claude-haiku-4-5"],
   "GROK": ["grok-4.20-0309-reasoning", "grok-4.20-0309-non-reasoning", "grok-4.5"]
 }
