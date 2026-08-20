@@ -84,7 +84,7 @@
 		Difícil: Exige análise, síntese ou avaliação. O aluno precisa relacionar múltiplos conceitos, identificar causa e efeito, tirar conclusões não explícitas no texto, ou resolver um problema com múltiplas etapas de raciocínio
 		- A distribuição de dificuldade deve ser aplicada sobre o conjunto total de questões da prova, não necessariamente dentro de cada tipo.
 		- Indique o valor da questão entre colchetes e o nível de dificuldade entre parênteses: [X pontos] (Médio)
-		- Para a resposta, sempre que você precisar exibir o símbolo de cifrão ($), adicione uma barra invertida antes dele para que apareça como \$ na resposta final.
+	
         # 6. Formato de Saída Esperado:
         ## 6.1 **Organize a prova da seguinte forma:**
         - Nunca repita o mesmo tipo de questão por mais de 2 questões consecutivas (exceto dissertativas, que, caso tenha sido elaborada, sempre deve ser apresentada ao final)
