@@ -40,29 +40,34 @@
         - Use linguagem adequada à faixa etária de {idade} anos, e no caso dos itens 2.1, 2.2 e 2.3, garanta que as alternativas incorretas/falsas sejam plausíveis, mas claramente erradas.
         - Considere também os tópicos de aprendizagem: **{topicos}** e as seguintes competências e habilidades a serem desenvolvidas: **{competencias}**. **MUITO IMPORTANTE: LIMITE A ELABORAÇÃO DAS QUESTÕES AOS TÓPICOS E COMPETÊNCIAS INFORMADOS, AINDA QUE O MATERIAL FORNECIDO POSSUA OUTRAS INFORMAÇÕES/CONTEÚDOS**
         - **Com exceção da disciplina Inglês, as questões devem ser elaboradas em português brasileiro, respeitando as normas gramaticais e ortográficas vigentes**.
-        # 4. Casos Especiais
-        ##  4.1 Disciplina **Matemática**
+		# 4. Cobertura Obrigatória de Conteúdo
+		- Antes de elaborar qualquer questão, liste individualmente cada item presente em {topicos} e cada item presente em {competencias}, tratando-os como uma checklist.
+		- Ao final da elaboração, cada item dessa checklist deve estar coberto por pelo menos uma questão da prova (não é necessário 1 questão por tipo, apenas ao menos 1 questão no total por tópico/competência).
+		- Distribua as questões de forma que nenhum tópico/competência fique sem cobertura só porque outro tópico "rendeu" mais perguntas. Se o conteúdo fornecido permitir múltiplas questões sobre um mesmo tópico e pouco sobre outro, ainda assim é obrigatório garantir ao menos 1 questão para o tópico menos explorado, mesmo que isso signifique reduzir a quantidade de questões dedicadas ao tópico mais explorado.
+		- Caso a quantidade total de questões solicitada seja insuficiente para cobrir todos os tópicos/competências informados (ex: 5 questões para 8 tópicos), priorize cobrir o maior número possível de tópicos distintos (1 questão por tópico) antes de gerar uma segunda questão sobre o mesmo tópico. Informe explicitamente, no final da prova, quais tópicos/competências não puderam ser contemplados devido à quantidade de questões solicitada.        
+		# 5. Casos Especiais
+        ##  5.1 Disciplina **Matemática**
         - Quando a disciplina escolhida for **Matemática**, caso seja adequada ao conteúdo fornecido, podem ser incluídas questões que envolvam raciocínio lógico e problemas matemáticos.
 		- Não use nenhuma formatação LaTeX ou notação científica codificada em suas respostas. Para qualquer operação matemática, escreva apenas em texto puro e linear, utilizando os símbolos padrão do teclado (como +, -, /, *, ^). Não use delimitadores como \( \) ou \[ \]. Escreva fórmulas e equações de forma corrida, na mesma linha, como se estivesse digitando em um bloco de notas simples.
-        ## 4.2 Disciplina **Inglês**
+        ## 5.2 Disciplina **Inglês**
         - As questões de sentence completion devem ter foco em vocabulário e/ou gramática.
         - Todo o output (questões, alternativas, gabarito) deve ser produzido em **LÍNGUA INGLESA**.
         - Cada questão de sentence completion deve conter de 5 a 10 subitens, todos sobre o mesmo tema. **Não misture temáticas diferentes em uma mesma questão. Se a questão é sobre tempos verbais, todas as subquestões devem tratar de tempos verbais. Se a questão é sobre vocabulário, todas as subquestões devem tratar de vocabulário.**
         - O inglês é a segunda língua da criança. Desta forma, não use vocabulário fora do material fornecido, nem estruturas avançadas demais para a idade.
-        ## 4.3 Questões existentes no conteúdo fornecido:
+        ## 5.3 Questões existentes no conteúdo fornecido:
         - **NUNCA repita as questões originais** presentes no material. Crie variações que avaliem os mesmos conceitos, mas com formulação diferente e contextos alternativos, sempre respeitanto o conteúdo fornecido. 
-        ### 4.3.1 **ESTRATÉGIAS DE VARIAÇÃO OBRIGATÓRIAS:**
+        ### 5.3.1 **ESTRATÉGIAS DE VARIAÇÃO OBRIGATÓRIAS:**
         - Identifique o conceito central de cada questão original e crie uma nova pergunta que avalie o mesmo conceito
         - Altere fundamentalmente a estrutura: transforme questões diretas em situações-problema
         - Mude o contexto de aplicação mantendo a habilidade cognitiva requerida
         - Inverta a perspectiva (ex: em vez de "o que causa X", pergunte "qual efeito Y produz")
         - Você pode criar contextos, exemplos e situações novas, desde que coerentes com os conceitos do conteúdo fornecido. Os contextos e exemplos podem ser criados livremente, mas os conceitos avaliados devem estar restritos aos tópicos e competências informados. A criação de contextos novos não se aplica às questões de interpretação textual (2.7), que obrigatoriamente usam trechos do material original.
-        ### 4.3.2 **VALIDAÇÃO DE ORIGINALIDADE:**
+        ### 5.3.2 **VALIDAÇÃO DE ORIGINALIDADE:**
         - Antes de finalizar cada questão, verifique mentalmente se ela não é uma reformulação superficial de questões existentes
         - Garanta que pelo menos 3 elementos sejam diferentes em relação às questões originais: contexto, estrutura linguística e exemplos utilizados
         - Priorize questões que exijam aplicação do conhecimento em vez de reprodução direta
-        # 5. Orientações finais:
-        - Dê prioridade aos conceitos mais fundamentais do conteúdo fornecido
+        # 6. Orientações finais:
+        - Dentro de cada tópico/competência informado, dê prioridade aos conceitos mais fundamentais — mas isso não exime a cobertura de nenhum tópico/competência da lista.
         - Para cada conceito importante, crie pelo menos uma questão de cada tipo solicitado
         - Com relação aos itens 2.1 e 2.2, deixe claro em cada questão se a resposta esperada é única ou múltipla.
 		- Atribua pontuações para cada questão formulada de forma proporcional à dificuldade, **de acordo com a seguinte regra**:
@@ -85,20 +90,23 @@
 		- A distribuição de dificuldade deve ser aplicada sobre o conjunto total de questões da prova, não necessariamente dentro de cada tipo.
 		- Indique o valor da questão entre colchetes e o nível de dificuldade entre parênteses: [X pontos] (Médio)
 	
-        # 6. Formato de Saída Esperado:
-        ## 6.1 **Organize a prova da seguinte forma:**
+        # 7. Formato de Saída Esperado:
+        ## 7.1 **Organize a prova da seguinte forma:**
         - Nunca repita o mesmo tipo de questão por mais de 2 questões consecutivas (exceto dissertativas, que, caso tenha sido elaborada, sempre deve ser apresentada ao final)
         - Use numeração contínua em toda a prova (1, 2, 3... não reinicie a numeração)
-        ## 6.2 **Gabarito:**
+        ## 7.2 **Gabarito:**
         - Apresente em seção separada no final, nunca junto às questões.
         - No gabarito, use apenas letras (A, B, C, D, E) para múltipla escolha e V/F para verdadeiro/falso.
         - Para as questões abertas, inclua apenas a resposta esperada.
         - Para as questões dissertativas, inclua a resposta esperada resumida e indique quais tópicos deveriam ser abordados.
         - Para as questões de sentence completion, inclua apenas a palavra correta para cada subitem.
         - Não repita o texto das questões no gabarito
-        # 7. Conteúdo pedagógico fornecido:
+        # 8. Conteúdo pedagógico fornecido:
         {texto_extraido_limpo}
 		# 8. **ANTES DE ENTREGAR A PROVA**:
 		1. Calcule a soma total de todas as pontuações
 		2. Se a soma for DIFERENTE de 100 (±0,2), reajuste as pontuações
 		3. Informe no final: "SOMA TOTAL DE PONTOS: [valor]"
+		4. Confira a checklist de tópicos/competências elaborada no início: verifique se cada item tem ao menos uma questão correspondente na prova.
+		5. Se algum item não foi contemplado, substitua uma questão redundante (que cobre um tópico já contemplado por outra questão) por uma nova questão sobre o tópico faltante, respeitando os tipos e quantidades solicitados.
+		6. Informe no final: "COBERTURA: X de Y tópicos/competências contemplados" e, se X < Y, liste quais não foram contemplados e o motivo (ex: quantidade de questões insuficiente, ou conteúdo fornecido insuficiente sobre aquele tópico).
