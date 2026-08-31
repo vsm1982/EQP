@@ -38,13 +38,14 @@
         - Elabore {quantidade_questoes_dissertativas} questões dissertativas, que devem ser respondidas com um mínimo de {quantidade_linhas_questoes_dissertativas} linhas, abordando os tópicos mais relevantes do conteúdo fornecido (informar que a pergunta precisa ser respondida com o mínimo de linhas informado). 
         # 3. Orientações Adicionais
         - Use linguagem adequada à faixa etária de {idade} anos, e no caso dos itens 2.1, 2.2 e 2.3, garanta que as alternativas incorretas/falsas sejam plausíveis, mas claramente erradas.
-        - Considere também os tópicos de aprendizagem: **{topicos}** e as seguintes competências e habilidades a serem desenvolvidas: **{competencias}**. **MUITO IMPORTANTE: LIMITE A ELABORAÇÃO DAS QUESTÕES AOS TÓPICOS E COMPETÊNCIAS INFORMADOS, AINDA QUE O MATERIAL FORNECIDO POSSUA OUTRAS INFORMAÇÕES/CONTEÚDOS**
+        - Considere também os tópicos de aprendizagem: **{topicos}** **MUITO IMPORTANTE: LIMITE A ELABORAÇÃO DAS QUESTÕES AOS TÓPICOS INFORMADOS, AINDA QUE O MATERIAL FORNECIDO POSSUA OUTRAS INFORMAÇÕES/CONTEÚDOS**
+		- Considere também as seguintes competências e habilidades a serem desenvolvidas: **{competencias}**. 
         - **Com exceção da disciplina Inglês, as questões devem ser elaboradas em português brasileiro, respeitando as normas gramaticais e ortográficas vigentes**.
 		# 4. Cobertura Obrigatória de Conteúdo
-		- Antes de elaborar qualquer questão, liste individualmente cada item presente em {topicos} e cada item presente em {competencias}, tratando-os como uma checklist.
-		- Ao final da elaboração, cada item dessa checklist deve estar coberto por pelo menos uma questão da prova (não é necessário 1 questão por tipo, apenas ao menos 1 questão no total por tópico/competência).
-		- Distribua as questões de forma que nenhum tópico/competência fique sem cobertura só porque outro tópico "rendeu" mais perguntas. Se o conteúdo fornecido permitir múltiplas questões sobre um mesmo tópico e pouco sobre outro, ainda assim é obrigatório garantir ao menos 1 questão para o tópico menos explorado, mesmo que isso signifique reduzir a quantidade de questões dedicadas ao tópico mais explorado.
-		- Caso a quantidade total de questões solicitada seja insuficiente para cobrir todos os tópicos/competências informados (ex: 5 questões para 8 tópicos), priorize cobrir o maior número possível de tópicos distintos (1 questão por tópico) antes de gerar uma segunda questão sobre o mesmo tópico. Informe explicitamente, no final da prova, quais tópicos/competências não puderam ser contemplados devido à quantidade de questões solicitada.        
+		- Antes de elaborar qualquer questão, liste individualmente cada item presente em {topicos}, tratando-os como uma checklist.
+		- Ao final da elaboração, cada item dessa checklist deve estar coberto por pelo menos uma questão da prova (não é necessário 1 questão por tipo, apenas ao menos 1 questão no total por tópico).
+		- Distribua as questões de forma que nenhum tópico fique sem cobertura só porque outro tópico "rendeu" mais perguntas. Se o conteúdo fornecido permitir múltiplas questões sobre um mesmo tópico e pouco sobre outro, ainda assim é obrigatório garantir ao menos 1 questão para o tópico menos explorado, mesmo que isso signifique reduzir a quantidade de questões dedicadas ao tópico mais explorado.
+		- Caso a quantidade total de questões solicitada seja insuficiente para cobrir todos os tópicos informados (ex: 5 questões para 8 tópicos), priorize cobrir o maior número possível de tópicos distintos (1 questão por tópico) antes de gerar uma segunda questão sobre o mesmo tópico. Informe explicitamente, no final da prova, quais tópicos não puderam ser contemplados devido à quantidade de questões solicitada.        
 		# 5. Casos Especiais
         ##  5.1 Disciplina **Matemática**
         - Quando a disciplina escolhida for **Matemática**, caso seja adequada ao conteúdo fornecido, podem ser incluídas questões que envolvam raciocínio lógico e problemas matemáticos.
@@ -67,7 +68,7 @@
         - Garanta que pelo menos 3 elementos sejam diferentes em relação às questões originais: contexto, estrutura linguística e exemplos utilizados
         - Priorize questões que exijam aplicação do conhecimento em vez de reprodução direta
         # 6. Orientações finais:
-        - Dentro de cada tópico/competência informado, dê prioridade aos conceitos mais fundamentais — mas isso não exime a cobertura de nenhum tópico/competência da lista.
+        - Dentro de cada tópico informado, dê prioridade aos conceitos mais fundamentais — mas isso não exime a cobertura de nenhum tópico da lista.
         - Para cada conceito importante, crie pelo menos uma questão de cada tipo solicitado
         - Com relação aos itens 2.1 e 2.2, deixe claro em cada questão se a resposta esperada é única ou múltipla.
 		- Atribua pontuações para cada questão formulada de forma proporcional à dificuldade, **de acordo com a seguinte regra**:
@@ -107,6 +108,6 @@
 		1. Calcule a soma total de todas as pontuações
 		2. Se a soma for DIFERENTE de 100 (±0,2), reajuste as pontuações
 		3. Informe no final: "SOMA TOTAL DE PONTOS: [valor]"
-		4. Confira a checklist de tópicos/competências elaborada no início: verifique se cada item tem ao menos uma questão correspondente na prova.
+		4. Confira a checklist de tópicos elaborada no início: verifique se cada item tem ao menos uma questão correspondente na prova.
 		5. Se algum item não foi contemplado, substitua uma questão redundante (que cobre um tópico já contemplado por outra questão) por uma nova questão sobre o tópico faltante, respeitando os tipos e quantidades solicitados.
-		6. Informe no final: "COBERTURA: X de Y tópicos/competências contemplados" e, se X < Y, liste quais não foram contemplados e o motivo (ex: quantidade de questões insuficiente, ou conteúdo fornecido insuficiente sobre aquele tópico).
+		6. Informe no final: "COBERTURA: X de Y tópicos contemplados" e, se X < Y, liste quais não foram contemplados e o motivo (ex: quantidade de questões insuficiente, ou conteúdo fornecido insuficiente sobre aquele tópico).
