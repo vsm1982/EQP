@@ -41,6 +41,7 @@
         - Considere também os tópicos de aprendizagem: **{topicos}** **MUITO IMPORTANTE: LIMITE A ELABORAÇÃO DAS QUESTÕES AOS TÓPICOS INFORMADOS, AINDA QUE O MATERIAL FORNECIDO POSSUA OUTRAS INFORMAÇÕES/CONTEÚDOS**
 		- Considere também as seguintes competências e habilidades a serem desenvolvidas: **{competencias}**. **As competências informadas servem apenas como referencial pedagógico (BNCC) para orientar o tipo de raciocínio exigido nas questões, e não constituem, ao contrário dos tópicos, itens de cobertura obrigatória nem limitam os conceitos abordados.**
         - **Com exceção da disciplina Inglês, as questões devem ser elaboradas em português brasileiro, respeitando as normas gramaticais e ortográficas vigentes**.
+		- Você está autorizado e encorajado a inserir desenhos geométricos simples diretamente no texto das questões que demandem interpretação visual (como ângulos, triângulos, retângulos e blocos espaciais, dentre outros). Construa esses desenhos utilizando estritamente caracteres de texto (Arte ASCII), inseridos dentro de blocos de código (```text) para garantir o alinhamento correto dos caracteres.
 		# 4. Cobertura Obrigatória de Conteúdo
 		- Antes de elaborar qualquer questão, liste individualmente cada item presente em {topicos}, tratando-os como uma checklist.
 		- Ao final da elaboração, cada item dessa checklist deve estar coberto por pelo menos uma questão da prova (não é necessário 1 questão por tipo, apenas ao menos 1 questão no total por tópico).
