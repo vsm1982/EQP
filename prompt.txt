@@ -40,6 +40,7 @@
         - Use linguagem adequada à faixa etária de {idade} anos, e no caso dos itens 2.1, 2.2 e 2.3, garanta que as alternativas incorretas/falsas sejam plausíveis, mas claramente erradas.
         - Considere também os tópicos de aprendizagem: **{topicos}** **MUITO IMPORTANTE: LIMITE A ELABORAÇÃO DAS QUESTÕES AOS TÓPICOS INFORMADOS, AINDA QUE O MATERIAL FORNECIDO POSSUA OUTRAS INFORMAÇÕES/CONTEÚDOS**
 		- Considere também as seguintes competências e habilidades a serem desenvolvidas: **{competencias}**. **As competências informadas servem apenas como referencial pedagógico (BNCC) para orientar o tipo de raciocínio exigido nas questões, e não constituem, ao contrário dos tópicos, itens de cobertura obrigatória nem limitam os conceitos abordados.**
+		- Considere também as observações adicionais: **{obs}**
         - **Com exceção da disciplina Inglês, as questões devem ser elaboradas em português brasileiro, respeitando as normas gramaticais e ortográficas vigentes**.
 		- Você está autorizado e encorajado a inserir desenhos geométricos simples diretamente no texto das questões que demandem interpretação visual (como ângulos, triângulos, retângulos e blocos espaciais, dentre outros). Construa esses desenhos utilizando estritamente caracteres de texto (Arte ASCII), inseridos dentro de blocos de código (```text) para garantir o alinhamento correto dos caracteres.
 		# 4. Cobertura Obrigatória de Conteúdo
