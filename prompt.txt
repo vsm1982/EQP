@@ -29,8 +29,24 @@
 		- Elabore {quantidade_questoes_ordenacao} questões do tipo ordenação lógica ou cronológica. Cada questão deve ter 5 itens. Apresente os itens embaralhados, precedidos de "( )" para inserção da resposta, e peça ao aluno que numere na ordem correta. Garanta que a sequência embaralhada apresentada ao aluno seja visivelmente distinta da ordem correta
         ## 2.5 Questões abertas: 
         Elabore {quantidade_questoes_abertas} questões subjetivas abertas.
-        ## 2.6 Questões do tipo sentence completion: 
-        - Somente para a disciplina **Inglês**, elabore {quantidade_questoes_sentence_completion} questões do tipo sentence completion.
+		## 2.6 Questões do tipo sentence completion:
+		- Somente para a disciplina **Inglês**, elabore {quantidade_questoes_sentence_completion} questões do tipo *sentence completion*.
+		
+		- **REGRA OBRIGATÓRIA DE EMBARALHAMENTO DA CAIXA DE OPÇÕES:**
+		  - Ao fornecer uma caixa de palavras/opções para completar os itens, **NUNCA liste as palavras na mesma ordem de resposta dos itens (a, b, c, d, e)**.
+		  - A ordem dos termos no banco de palavras **DEVE SER TOTALMENTE EMBARALHADA e ALEATÓRIA** em relação à sequência correta das frases.
+		
+		- **Exemplo do que NÃO fazer (Incorreto):**
+		  - Caixa de palavras: [hearing, sight, smell]
+		  - Item a) resposta: hearing
+		  - Item b) resposta: sight
+		  - Item c) resposta: smell
+		
+		- **Exemplo do que FAZER (Correto):**
+		  - Caixa de palavras: [smell, hearing, sight] (ordem aleatória)
+		  - Item a) resposta: hearing
+		  - Item b) resposta: sight
+		  - Item c) resposta: smell
         ## 2.7 Questões do tipo interpretação textual:
         Elabore {quantidade_questoes_interpretacao} questões de interpretação textual, que devem ser do tipo aberta.
         - Importante: considerando que a criança não terá acesso ao material de estudo na hora da prova, todas as questões de interpretação textual devem incluir o trecho de texto que permita a realização da interpretação, que necessariamente deve ser extraído do material fornecido. Considerando que o material foi extraído via OCR e pode conter algumas imprecisões, .pequenas correções ortográficas ou de palavras claramente corrompidas pelo OCR são toleradas, mas o trecho deve preservar fielmente o conteúdo e a estrutura do original. O tamanho do trecho deve variar conforme a questão proposta, dentro das habilidades esperadas para a faixa etária de {idade} anos.
